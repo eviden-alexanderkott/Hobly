@@ -25,11 +25,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule, // Hinzufügen des ReactiveForms-Moduls
+    ReactiveFormsModule, 
     AppRoutingModule,
     MatProgressBarModule
   ],
-  providers: [AuthService], // Hinzufügen des AuthService zu den Anbietern
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -20,14 +20,14 @@ export class StartComponent {
   }
 
   isLoggedIn(): boolean {
-    // Implementiere die Logik zur Überprüfung der Authentifizierung
-    return true;  // Beispiel: Immer als eingeloggt betrachten (ersetze durch deine Logik)
+    
+    return true;  
   }
 
   addHobby(): void {
     if (this.newHobby.trim() !== '') {
       this.hobbies.push(this.newHobby);
-      this.newHobby = ''; // Setze das Eingabefeld zurück, nachdem ein Hobby hinzugefügt wurde
+      this.newHobby = ''; 
     }
   }
 

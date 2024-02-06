@@ -14,9 +14,9 @@ export class ContactComponent {
   constructor() {}
 
   submitForm(): void {
-    // Hier können Sie die Logik für den Formularversand oder die Verarbeitung implementieren
+    // LOGIK FEHLT
     console.log('Formular gesendet:', this.name, this.email, this.message);
-    // Setzen Sie die Formularfelder zurück
+    // zurücksetzen voererst
     this.name = '';
     this.email = '';
     this.message = '';

@@ -18,7 +18,7 @@ export class RegisterComponent {
     console.log('Registrierung wird aufgerufen');
     const registrationResult = this.authService.registerUser(this.username, this.password);
 
-    // Überprüfen Sie das Ergebnis der Registrierung und setzen Sie die Nachricht und Farbe entsprechend
+    // Registrierungslogik
     if (registrationResult.success) {
       this.registrationStatus.message = 'Registrierung erfolgreich!';
       this.registrationStatus.color = 'green';
