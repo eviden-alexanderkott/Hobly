@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HobbyLobby</title>
+  <!-- Import Google Icon Font -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import materialize.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+  <div *ngIf="isLoggedIn(); else loginMessage">
+    <!-- Startseite mit Hobbies -->
+    <header>
+      <h1 class="flow-text">HobbyLobby</h1>
+      <p class="flow-text">Startseite</p>
+      <p class="flow-text">Meine Hobbies:</p>
+  
+      <ul class="hobbies-list">
+        <li *ngFor="let hobby of hobbies; let i = index">
+          {{ hobby }}
+          <button class="waves-effect waves-light btn" (click)="removeHobby(i)">Löschen</button>
+        </li>
+      </ul>
+    </header>
+  
+    <!-- Formular zum Hinzufügen neuer Hobbys -->
+    <div>
+      <input type="text" [(ngModel)]="newHobby" placeholder="Neues Hobby eingeben">
+      <button class="waves-effect waves-light btn" (click)="addHobby()">Hobby hinzufügen</button>
+    </div>
+  </div>
+  
+  <ng-template #loginMessage>
+    <!-- Fehlermeldung für nicht eingeloggte Benutzer -->
+    <div class="login-message">
+      <p class="flow-text">Du musst dich erst einloggen, um die Startseite zu sehen.</p>
+      <!-- Hier kannst du einen Link zur Anmeldeseite oder ein Anmeldeformular hinzufügen -->
+    </div>
+  </ng-template>
+
+  <!-- JavaScript at end of body for optimized loading -->
+  <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/js/materialize.min.js"></script>
+</body>
+
+</html>

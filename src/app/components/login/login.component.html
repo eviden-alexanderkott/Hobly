@@ -1,0 +1,40 @@
+<!-- login.component.html -->
+
+<!DOCTYPE html>
+<html>
+  <title>Login Page</title>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <div *ngIf="loading" class="loading-container">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+    <div *ngIf="!loading">
+      <form (submit)="login()">
+        <label>Benutzername:
+          <input [(ngModel)]="username" name="username" type="text" required>
+        </label>
+
+        <label>Passwort:
+          <input [(ngModel)]="password" name="password" type="password" required>
+        </label>
+        
+        <div *ngIf="!!errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        <button type="submit">Anmelden</button>
+      </form>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/js/materialize.min.js"></script>
+  </body>
+</html>
