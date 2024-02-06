@@ -1,0 +1,43 @@
+
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+
+@media (max-width: $mobile-breakpoint) {
+ 
+  body {
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+  
+  body {
+    font-size: 18px;
+  }
+  
+  .container {
+    width: 500px;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  
+  body {
+    font-size: 20px;
+  }
+  
+  .container {
+    width: 800px;
+  }
+}
+.mat-typography {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #ccc;
+  }
+  

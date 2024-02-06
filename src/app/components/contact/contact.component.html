@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+              <!-- contact.component.html -->
+        <div class="contact-container">
+          <h1>Kontaktieren Sie uns</h1>
+          <h2>Hier können Sie uns erreichen.</h2>
+          <p>Telefonnummer: +49 123 456 789</p>
+          <p>Email: office&#64;eviden.com</p>
+          <p>Adresse: Eviden GmbH, Musterstraße 123, 12345 Musterstadt</p>
+          <p>Öffnungszeiten: Montag bis Freitag, 9:00 - 18:00 Uhr</p>
+          <p>Wir freuen uns auf Ihre Anfrage!</p>
+          <p>Bitte füllen Sie das Kontaktformular aus, um uns eine Nachricht zu senden.</p>
+          <p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
+          <p>Vielen Dank!</p>
+          <p>Das Eviden-Team</p>
+          <form (ngSubmit)="submitForm()">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" [(ngModel)]="name" required>
+            </div>
+        
+            <div>
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" [(ngModel)]="email" required>
+            </div>
+        
+            <div>
+              <label for="message">Nachricht:</label>
+              <textarea id="message" [(ngModel)]="message" required></textarea>
+            </div>
+        
+            <button type="submit">Absenden</button>
+          </form>
+        </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
+            
+  

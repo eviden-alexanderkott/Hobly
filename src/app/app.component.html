@@ -1,0 +1,15 @@
+<!-- app.component.html -->
+
+<div *ngIf="isLoggedIn(); else loginMessage">
+    <!-- Deine Inhalte, die nur für eingeloggte Benutzer sichtbar sein sollen -->
+    <p>Willkommen, eingeloggter Benutzer!</p>
+    <button (click)="logout()">Ausloggen</button>
+  </div>
+  <ng-template #loginMessage>
+    <!-- Deine Meldung für nicht eingeloggte Benutzer -->
+    <p>Bitte einloggen, um die Inhalte zu sehen.</p>
+    <!-- Navigationslink zur LoginComponent -->
+    <a routerLink="/login">Zum Login</a>
+  </ng-template>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
