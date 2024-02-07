@@ -1,16 +1,16 @@
-// start.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StartComponent } from '../start/start.component';
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.scss'],
+  selector: 'app-subhobby',
+  templateUrl: './subhobby.component.html',
+  styleUrl: './subhobby.component.scss'
 })
-export class StartComponent {
+export class SubhobbyComponent {
   message: string | undefined;
   newHobby: string = '';
-  hobbies: string[] = ['Reisen', 'Kochen', 'Fotografie','Joggen'];
+  hobbies: string[] = ['mache deinen ersten Eintrag'];
 
   constructor(private router: Router) {
     const navigation = this.router.getCurrentNavigation();
@@ -18,12 +18,7 @@ export class StartComponent {
       this.message = (navigation.extras.state as { message: string }).message;
     }
   }
-
-  isLoggedIn(): boolean {
-    // Implementiere die Logik zur Überprüfung der Authentifizierung
-    return true;  // Beispiel: Immer als eingeloggt betrachten (ersetze durch deine Logik)
-  }
-
+  
   addHobby(): void {
     if (this.newHobby.trim() !== '') {
       this.hobbies.push(this.newHobby);
@@ -36,7 +31,8 @@ export class StartComponent {
   }
   ngOnInit() {
   }
-  navigateToSubhobby() {
-    this.router.navigate(['./subhobby']);
+  navigateToEntry() {
+    this.router.navigate(['./entry']);
   }
+
 }

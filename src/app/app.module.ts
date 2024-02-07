@@ -11,6 +11,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { StartComponent } from './components/start/start.component';
 import { AuthService } from './services/auth.service'; // Import des AuthService
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SubhobbyComponent } from './components/subhobby/subhobby.component';
+import { EntryComponent } from './components/entry/entry.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NavbarComponent,
     RegisterComponent,
     StartComponent,
+    SubhobbyComponent,
+    EntryComponent,
   ],
   imports: [
     BrowserModule,

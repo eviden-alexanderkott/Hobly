@@ -1,0 +1,18 @@
+<header>
+    <h1 class="flow-text">HobbyLobby</h1>
+    <p class="flow-text">Meine Hobbies:</p>
+
+    <ul class="hobbies-list">
+      <li *ngFor="let hobby of hobbies; let i = index">
+        {{ hobby }}
+        <button class="waves-effect waves-light btn" (click)="removeHobby(i)">Löschen</button>
+        <button class="waves-effect waves-mid btn"  (click)="navigateToEntry()">Einträge</button>
+
+      </li>
+    </ul>
+  </header>
+  <div>
+    <input type="text" [(ngModel)]="newHobby" placeholder="Neue Kategorie eingeben">
+    <button class="waves-effect waves-light btn" (click)="addHobby()">Kategorie einfügen</button>
+  </div>
+
