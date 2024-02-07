@@ -1,20 +1,33 @@
+$mobile-breakpoint: 428px; // iPhone 14 Pro Max Breite
+$tablet-breakpoint: 1024px;
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #03f42b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hobbies-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  margin: 5px; // Gleichmäßiger Abstand um die Buttons herum
+}
+
+@media (max-width: $mobile-breakpoint) {
   header {
-    background-color: #03f42b;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 10px;
   }
-  
+
   .hobbies-list {
-    list-style-type: none;
-    padding: 0;
+    padding: 10px;
   }
-  button {
-    margin: 0 7px;
-  }
+}

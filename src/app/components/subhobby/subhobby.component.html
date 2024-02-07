@@ -1,18 +1,38 @@
-<header>
-    <h1 class="flow-text">HobbyLobby</h1>
-    <p class="flow-text">Meine Hobbies:</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 class="flow-text">HobbyLobby</h1>
+      <p class="flow-text">Meine Hobbies:</p>
+      <ul class="hobbies-list">
+        <li *ngFor="let hobby of hobbies; let i = index">
+          <div class="hobby-container">
+            <span>{{ hobby }}</span>
+            <div class="button-container">
+              <button class="waves-effect waves-light btn" (click)="removeHobby(i)">Löschen</button>
+              <button class="waves-effect waves-mid btn" (click)="navigateToEntry()">Einträge</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
 
-    <ul class="hobbies-list">
-      <li *ngFor="let hobby of hobbies; let i = index">
-        {{ hobby }}
-        <button class="waves-effect waves-light btn" (click)="removeHobby(i)">Löschen</button>
-        <button class="waves-effect waves-mid btn"  (click)="navigateToEntry()">Einträge</button>
+    <!-- Hauptbereich -->
+    <div>
+      <input type="text" [(ngModel)]="newHobby" placeholder="Neue Kategorie eingeben">
+      <button class="waves-effect waves-light btn" (click)="addHobby()">Kategorie einfügen</button>
+    </div>
 
-      </li>
-    </ul>
-  </header>
-  <div>
-    <input type="text" [(ngModel)]="newHobby" placeholder="Neue Kategorie eingeben">
-    <button class="waves-effect waves-light btn" (click)="addHobby()">Kategorie einfügen</button>
-  </div>
-
+    <!-- JavaScript am Ende des Body für optimales Laden -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
