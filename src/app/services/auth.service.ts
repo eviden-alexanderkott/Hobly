@@ -34,7 +34,7 @@ export class AuthService {
     return this.isAuthenticatedFlag;
   }
 
-  // Beispiel-Methode zum Einloggen. Du musst dies an deine eigene Logik anpassen.
+  
   login(username: string, password: string): boolean {
     const isAuthenticated = this.authenticateUser(username, password);
 
@@ -45,7 +45,7 @@ export class AuthService {
     return isAuthenticated;
   }
 
-  // Beispiel-Methode zum Ausloggen. Du musst dies an deine eigene Logik anpassen.
+  
   logout(): void {
     this.isAuthenticatedFlag = false;
   }

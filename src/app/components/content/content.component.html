@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h1>Eintrag erstellen</h1>
+
+<form (ngSubmit)="OnSubmit()">
+  <label for="wert">Wert:</label>
+  <input type="text" id="wert" name="wert" [(ngModel)]="wert">
+<div>
+  <label for="einheit">Einheit:</label>
+  <select id="einheit" name="einheit" [(ngModel)]="einheit">
+    <option *ngFor="let einheit of einheiten" [value]="einheit">{{einheit}}</option>
+  </select>
+</div>
+  <label for="notiz">Notiz:</label>
+  <textarea id="notiz" name="notiz" [(ngModel)]="notiz"></textarea>
+
+  <button class="btn waves-effect waves-light" type="submit" (click)="OnSubmit">Speichern
+    <i class="material-icons right">send</i>
+  </button>
+</form>
+    <!-- JavaScript am Ende des Body für optimales Laden -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+  </html>

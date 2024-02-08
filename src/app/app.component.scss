@@ -1,34 +1,39 @@
-$mobile-breakpoint: 428px; // iPhone 14 Pro Max Breite
+
+$mobile-breakpoint: 768px;
 $tablet-breakpoint: 1024px;
 
+
 @media (max-width: $mobile-breakpoint) {
+ 
   body {
     font-size: 16px;
   }
-
+  
   .container {
     width: 100%;
   }
 }
 
 @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+  
   body {
     font-size: 18px;
   }
-
+  
   .container {
-    width: 90%; // Anpassung für eine bessere Darstellung auf dem iPhone 14 Pro Max
-    max-width: 500px; // Maximale Breite für Tablet-Ansicht
+    width: 500px;
   }
 }
 
 @media (min-width: $tablet-breakpoint) {
+  
   body {
     font-size: 20px;
   }
-
+  
   .container {
-    width: 90%; // Anpassung für eine bessere Darstellung auf dem iPhone 14 Pro Max
-    max-width: 800px; // Maximale Breite für Desktop-Ansicht
+    width: 800px;
   }
 }
+
+  

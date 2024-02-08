@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { StartComponent } from './components/start/start.component';
 import { SubhobbyComponent } from './components/subhobby/subhobby.component';
 import { EntryComponent } from './components/entry/entry.component';
+import { ContentComponent } from './components/content/content.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'start', component: StartComponent },
   {path:'subhobby', component: SubhobbyComponent},
   {path:'entry', component:EntryComponent},
+  {path:'content', component: ContentComponent},
   { path: '**', redirectTo: 'start' }, // Fallback für alle nicht übereinstimmenden Pfade
 ];
 

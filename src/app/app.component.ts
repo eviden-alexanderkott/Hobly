@@ -1,7 +1,7 @@
 // app.component.ts
 
 import { Component } from '@angular/core';
-import { AuthService } from './services/auth.service';  // Passe den Pfad entsprechend an
+import { AuthService } from './services/auth.service';  
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,9 @@ export class AppComponent {
   constructor(private authService: AuthService) {}
 
   isLoggedIn(): boolean {
-    return (this.authService as any).isAuthenticated();  // Ignoriere den Typ für dieses Beispiel
+    return (this.authService as any).isAuthenticated();  
   }
-  title: string = 'hobly'; // Füge diese Zeile hinzu
+  title: string = 'hobly'; 
 
   logout(): void {
     this.authService.logout();

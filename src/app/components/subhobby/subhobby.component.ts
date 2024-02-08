@@ -22,7 +22,7 @@ export class SubhobbyComponent {
   addHobby(): void {
     if (this.newHobby.trim() !== '') {
       this.hobbies.push(this.newHobby);
-      this.newHobby = ''; // Setze das Eingabefeld zurück, nachdem ein Hobby hinzugefügt wurde
+      this.newHobby = ''; 
     }
   }
 
@@ -33,6 +33,9 @@ export class SubhobbyComponent {
   }
   navigateToEntry() {
     this.router.navigate(['./entry']);
+  }
+  getBack(){
+    this.router.navigate(['./start']);
   }
 
 }

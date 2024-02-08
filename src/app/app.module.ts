@@ -13,6 +13,7 @@ import { AuthService } from './services/auth.service'; // Import des AuthService
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SubhobbyComponent } from './components/subhobby/subhobby.component';
 import { EntryComponent } from './components/entry/entry.component';
+import { ContentComponent } from './components/content/content.component';
 
 
 @NgModule({
@@ -25,15 +26,16 @@ import { EntryComponent } from './components/entry/entry.component';
     StartComponent,
     SubhobbyComponent,
     EntryComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule, // Hinzufügen des ReactiveForms-Moduls
+    ReactiveFormsModule, 
     AppRoutingModule,
     MatProgressBarModule
   ],
-  providers: [AuthService], // Hinzufügen des AuthService zu den Anbietern
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

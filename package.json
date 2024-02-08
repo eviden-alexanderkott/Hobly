@@ -24,6 +24,8 @@
     "@material/web": "^1.2.0",
     "materialize": "^1.0.0",
     "materialize-css": "^1.0.0-rc.2",
+    "primeicons": "^6.0.1",
+    "primeng": "^17.5.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.3"

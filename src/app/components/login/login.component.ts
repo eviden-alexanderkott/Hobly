@@ -12,7 +12,7 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
   loading: boolean = false;
-  errorMessage: string = ''; // Fügen Sie diese Zeile hinzu
+  errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 

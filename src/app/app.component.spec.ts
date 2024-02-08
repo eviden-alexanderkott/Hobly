@@ -20,5 +20,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('hobly');
   });
 
-  // ... Weitere Tests ...
+
 });

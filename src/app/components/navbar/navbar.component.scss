@@ -9,20 +9,20 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: flex; /* Verwende flexbox für das Layout der Listenelemente */
+  display: flex; 
 }
 
 .navbar li {
-  flex: 1; /* Verteile den verfügbaren Platz gleichmäßig zwischen den Listenelementen */
+  flex: 1; 
 }
 
 .navbar a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px; /* Reduziere den oberen und unteren Abstand */
+  padding: 10px; 
   text-decoration: none;
-  box-sizing: border-box; /* Behalte das Box-Modell bei */
+  box-sizing: border-box; 
 }
 
 .navbar a:hover {
